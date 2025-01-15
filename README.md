@@ -1,2 +1,2 @@
-# satyamd8.github.io
-portfolio website WORK IN PROGRESS
+WORK IN PROGRESS
+portfolio website WIP
