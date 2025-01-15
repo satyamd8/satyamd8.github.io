@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Satyam Dhar</title>
+</head>
+<body>
+    <!-- Header bar with the different sections, include shaded box for current section (animations as well)-->
+    <header>
+        <nav>
+            <div class="navi">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <!--NEXT TO EACHOTHER-->
+    <section class="container">
+        <section id="picture">
+            <h2>I'm Satyam!</h2>
+            <div class="picture">
+                <img src="IMG_2651.JPG">
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about">
+                <p>My name is Satyam Dhar and I'm currently a junior at CUNY Hunter College, majoring in Computer Science.</p>
+                <br>
+                <p>I'm interested in software development along with front-end, back-end, and full-stack web development.</p>
+            </div>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/satyam-dhar-3b3324252/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/satyamd8" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+            </div>
+        </section>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-tabs">
+            <ul class="tabs">
+                <li data-tab-target="#qr" class="active tab">QR Code Creator</li>
+                <li data-tab-target="#quote" class="tab">Random Quote Generator</li>
+                <li data-tab-target="#place" class="tab">Placeholder</li>
+                <li data-tab-target="#holder" class="tab">Placeholder</li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="qr" data-tab-content class="active">
+                    <h3>QR Code Creator</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat non, itaque aperiam sint pariatur exercitationem tempore omnis, fuga possimus veritatis sit nam minus soluta error cupiditate accusamus deleniti repudiandae?</p>
+                    <img src="https://miro.medium.com/v2/resize:fit:789/1*A9YcoX1YxBUsTg7p-P6GBQ.png" width="250" height="200" alt="qr code">
+                </div>
+                <div id="quote" data-tab-content>
+                    <h3>Random Quote Generator</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat non, itaque aperiam sint pariatur exercitationem tempore omnis, fuga possimus veritatis sit nam minus soluta error cupiditate accusamus deleniti repudiandae?</p>
+                </div>
+                <div id="place" data-tab-content>
+                    <h3>Placeholder</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat non, itaque aperiam sint pariatur exercitationem tempore omnis, fuga possimus veritatis sit nam minus soluta error cupiditate accusamus deleniti repudiandae?</p>
+                </div>
+                <div id="holder" data-tab-content>
+                    <h3>Placeholder</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat non, itaque aperiam sint pariatur exercitationem tempore omnis, fuga possimus veritatis sit nam minus soluta error cupiditate accusamus deleniti repudiandae?</p>
+                </div>
+            </div>
+        </div>
+        <div class="description"></div>
+        <div class="project-image"></div>
+    </section>
+</body>
+<footer>
+    <p>© 2025 Satyam Dhar ©</p>
+</footer>
+</html>
