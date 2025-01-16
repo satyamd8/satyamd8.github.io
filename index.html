@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Satyam Dhar WORK IN PROGRESS</title>
 </head>
 <body>
@@ -16,8 +17,8 @@
     <header>
         <nav>
             <div class="navi">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
+                <a data-nav-target="#about" class="active nav" href="#about">About</a>
+                <a data-nav-target="#projects" class="nav" href="#projects">Projects</a>
             </div>
         </nav>
     </header>
@@ -25,22 +26,72 @@
     <!--NEXT TO EACHOTHER-->
     <section class="container">
         <section id="picture">
+            <div class="moon"></div>
             <h2>I'm Satyam!</h2>
             <div class="picture">
-                <img src="IMG_2651.JPG">
+                <img src="IMG_2651.JPG" alt="Satyam's Picture">
             </div>
         </section>
         <section id="about">
-            <h2>About Me</h2>
             <div class="about">
+                <h2>About Me</h2>
                 <p>My name is Satyam Dhar and I'm currently a junior at CUNY Hunter College, majoring in Computer Science.</p>
-                <br>
                 <p>I'm interested in software development along with front-end, back-end, and full-stack web development.</p>
             </div>
             <div class="links">
-                <a href="https://www.linkedin.com/in/satyam-dhar-3b3324252/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/satyamd8" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+                <h2>Links</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/satyam-dhar-3b3324252/" target="_blank">
+                            <i id="icon" class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/satyamd8" target="_blank">
+                            <i id="icon" class="fa-brands fa-square-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" target="_blank">
+                            <i id="icon" class="fa-brands fa-square-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                        <span>Java</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        <span>HTML</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <span>CSS</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <span>Python</span>
+                    </li>
+                </ul>
+
+                <!--
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                -->
             </div>
         </section>
     </section>

@@ -16,3 +16,14 @@ tabs.forEach(tab => {
         tab.classList.add('active')
     })
 })
+
+const navLinks = document.querySelectorAll('.navi a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        link.classList.add('active'); 
+    });
+});
