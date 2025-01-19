@@ -1,3 +1,4 @@
+//projects tab
 const tabs = document.querySelectorAll('[data-tab-target]')
 const tabContents = document.querySelectorAll('[data-tab-content]')
 
@@ -17,6 +18,8 @@ tabs.forEach(tab => {
     })
 })
 
+
+//nav
 const navLinks = document.querySelectorAll('.navi a');
 
 navLinks.forEach(link => {

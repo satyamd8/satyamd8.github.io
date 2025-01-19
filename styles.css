@@ -162,12 +162,20 @@ nav {
 
 /* PROJECT TAB STYLE */
 [data-tab-content] {
-    display: none;
     background-color: #97946B;
+    opacity: 0;
+    transform: translateY(0); 
+    pointer-events: none; 
+    transition: opacity 0.3s ease, transform 1s ease; 
+    position: absolute;
+    width: 100%; 
 }
 
 .active[data-tab-content] {
     display:block;
+    opacity: 1;
+    transform: translateY(10px); 
+    pointer-events: auto; 
 }
 
 .tabs {
