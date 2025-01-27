@@ -141,8 +141,9 @@ nav {
     text-align: center;
 }
 
-#icon {
-    font-size: clamp(2rem, 3vw, 3rem);
+.links img {
+    width: clamp(2rem, 3vw, 3rem);
+    height: auto;
 }
 
 .links span {
@@ -230,7 +231,7 @@ nav {
 }
 
 .skills img {
-    width: clamp(2rem, 3vw, 3rem);
+    width: clamp(3rem, 3vw, 3rem);
     height: auto;
 }
 
