@@ -10,6 +10,13 @@ body {
     min-width: 320px; /* Minimum width for mobile */
 }
 
+section {
+    padding: 10rem;
+    margin:0 auto;
+    max-width: 150rem;
+    border-radius: 7px;
+}
+
 h1, h2, h3, h4 {
     font-weight:normal;
 }
@@ -17,7 +24,7 @@ h1, h2, h3, h4 {
 /* Navigation Bar */
 nav {
     background-color: #7A594F;
-    height: 5rem;
+    height: 4rem;
 
     display: flex;
     justify-content: center;
@@ -35,10 +42,11 @@ nav {
     text-decoration: none;
     margin:3rem;
     padding:20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     font-family: monospace;
     font-size: 1.5rem;
+    border-radius: 5px;
 }
 
 .navi a.active {
@@ -89,6 +97,7 @@ nav {
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 /*About*/
@@ -99,30 +108,24 @@ nav {
     min-height: min(20vw, 300px);
     position: relative;
     padding: 1rem;
+    padding-top: 0.3rem;
 }
 
 .about {
     margin-top: 2rem;
     margin-left: clamp(1rem, 3vw, 3rem);
-    max-width: 80%;
     font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
-/*Links and Skills common styles*/
-.links, .skills {
+/*Links*/
+.links {
     position: absolute;
     bottom: 1rem;
-}
-
-.links {
     left: clamp(1rem, 3vw, 3rem);
 }
 
-.skills {
-    right: clamp(1rem, 3vw, 20rem);
-}
 
-.links ul, .skills ul {
+.links ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -131,7 +134,7 @@ nav {
     justify-content: center;
 }
 
-.links li, .skills li {
+.links li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,12 +145,7 @@ nav {
     font-size: clamp(2rem, 3vw, 3rem);
 }
 
-.skills img {
-    width: clamp(2rem, 3vw, 3rem);
-    height: auto;
-}
-
-.links span, .skills span {
+.links span {
     display: block;
     margin-top: 0.5rem;
     font-size: clamp(0.8rem, 1vw, 1rem);
@@ -158,23 +156,34 @@ nav {
 /*Project*/
 #projects {
     background-color: #FFF0C7;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.project-tabs {
+    width: 100%;
+    padding: 0;
 }
 
 /* PROJECT TAB STYLE */
 [data-tab-content] {
     background-color: #97946B;
     opacity: 0;
-    transform: translateY(0); 
+    transform: translateY(15px); 
     pointer-events: none; 
     transition: opacity 0.3s ease, transform 1s ease; 
     position: absolute;
-    width: 100%; 
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
 }
 
 .active[data-tab-content] {
     display:block;
     opacity: 1;
-    transform: translateY(10px); 
+    transform: translateY(30px); 
     pointer-events: auto; 
 }
 
@@ -182,14 +191,15 @@ nav {
     display: flex;
     justify-content:baseline; /*center*/
     list-style: none;
-    margin-left: 0vw;
-    margin-right: 0vw;
     padding: 0;
+    gap:1rem;
 }
 
 .tab {
     cursor: pointer;
-    padding:10px;
+    padding: 0.5rem 1rem;
+    background-color: #f5e4b6f3;
+    border-radius: 5px;
 }
 
 .tab.active {
@@ -198,12 +208,50 @@ nav {
 }
 
 .tab:hover {
-    background-color: #ccbe96;
+    background-color: #e9d8a7;
     transition: background-color 0.3s ease;
 }
 
 .tab-content {
     margin-left: 0vw;
+}
+
+/*Skills*/
+#skills {
+    background-color: #5F7055;
+    padding: 3rem;
+    margin: 1rem auto;
+    margin-bottom: 25rem;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    top: 325px;
+    text-align: center;
+}
+
+.skills img {
+    width: clamp(2rem, 3vw, 3rem);
+    height: auto;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 2.5rem);
+    justify-content: center;
+}
+
+.skills li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /*footer*/
