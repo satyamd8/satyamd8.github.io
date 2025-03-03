@@ -280,10 +280,25 @@ main section {
 
 
 
+
+
+
 #projects {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#projects ul {
+    list-style-type: none;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 50px;
+}
+
+#projects li {
+    flex: 0 0 auto;
 }
