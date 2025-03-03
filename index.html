@@ -3,61 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <title>Satyam Dhar WORK IN PROGRESS</title>
+    <title>Satyam's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header bar with the different sections, include shaded box for current section (animations as well)-->
+    <!--Mobile-->
+    <input type="checkbox" id="menu">
+    <!--Mobile-->
     <header>
+        <h1><span>S</span>atyam <span>D</span>har</h1>
+        <!--Mobile-->
+        <label for="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <!--Mobile-->
         <nav>
-            <div class="navi">
-                <a data-nav-target="#about" class="active nav" href="#about">About</a>
-                <a data-nav-target="#projects" class="nav" href="#projects">Projects</a>
-                <a data-nav-target="#skills" class="nav" href="#skills">Skills</a>
-            </div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!--NEXT TO EACHOTHER-->
-    <section class="container">
-        <section id="picture">
-            <h2>I'm Satyam!</h2>
-            <div class="picture">
-                <img src="IMG_2651.JPG" alt="Satyam's Picture">
+    <main>
+        <section id="about">
+            <div class="img-container">
+                <img class="me" src="/satyamd8.github.io/imgs/me.JPG" alt="A picture of me">
+            </div>
+            <div class="about">
+                <h1>About Me</h1>
+                <p>
+                    I am a web developer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and React. I am always looking to learn new technologies and improve my skills.
+                </p>
             </div>
         </section>
-        <section id="about">
-            <div class="about">
-                <h2>About Me</h2>
-                <p>My name is Satyam Dhar and I'm currently a junior at CUNY Hunter College, majoring in Computer Science.</p>
-                <p>I'm interested in software development along with front-end, back-end, and full-stack web development.</p>
-            </div>
-            <div class="links">
-                <h2>Links</h2>
-                <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/satyam-dhar-3b3324252/" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
-                            <span>LinkedIn</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/satyamd8" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
-                            <span>GitHub</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--
+        
+        <section id="skills">
+            <h2>Skills</h2>
             <div class="skills">
-                <h2>Languages</h2>
                 <ul>
                     <li>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
@@ -85,12 +70,10 @@
                     </li>
                 </ul>
             </div>
-        -->
         </section>
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+        <section id="projects">
+            <h2>Projects</h2>
         <div class="project-tabs">
             <ul class="tabs">
                 <li data-tab-target="#qr" class="active tab">QR Code Creator</li>
@@ -121,41 +104,10 @@
         </div>
         <div class="description"></div>
         <div class="project-image"></div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-                    <span>C++</span>
-                </li>
-                <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-                    <span>Java</span>
-                </li>
-                <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                    <span>Python</span>
-                </li>
-                <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-                    <span>HTML</span>
-                </li>
-                <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-                    <span>CSS</span>
-                </li>
-                <li>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                    <span>JavaScript</span>
-                </li>
-            </ul>
-        </div>
-    </section>
+        <section id="contact">
+        </section>
+    </main>
 </body>
-<footer>
-    <p>© 2025 Satyam Dhar ©</p>
-</footer>
 </html>
