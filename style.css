@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
 
@@ -19,7 +20,7 @@ https://www.joshwcomeau.com/css/interactive-guide-to-grid/
     padding: 0;
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 html {
@@ -27,8 +28,19 @@ html {
 }
 
 body {
+    background: #1E2125;
+}
+
+hr {
+    width: 90%;
+    height: 4px;
+    border: none;
+    border-radius: 50px;
     background: #E9DFCE;
 }
+
+
+
 
 header {
     background: #1E2125;
@@ -155,6 +167,10 @@ main {
     gap: 50px;
 }
 
+main h1 {
+    font-size: 60px;
+}
+
 main section {
     max-width: 100%;
     width: 100%;
@@ -187,6 +203,7 @@ main section {
 }
 
 #hero h1 {
+    font-family: "Playfair Display", sans-serif;
     font-size: 200px;
     font-weight: 200;
 }
@@ -289,6 +306,12 @@ main section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding: 0 100px;
+}
+
+#projects h1 {
+    margin-bottom: 200px;
 }
 
 #projects ul {
@@ -296,9 +319,21 @@ main section {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
+
+    width: 100%;
+    height: 200px;
     gap: 50px;
 }
 
 #projects li {
     flex: 0 0 auto;
+}
+
+#projects a {
+    color: #E9DFCE
+}
+
+#projects a:hover {
+    font-size: 20px;
+    transition: 0.1s;
 }
