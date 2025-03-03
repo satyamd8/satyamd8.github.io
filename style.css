@@ -27,12 +27,13 @@ html {
 }
 
 body {
-    background: gainsboro;
+    background: #E9DFCE;
 }
 
 header {
-    background: rgba(243, 243, 243, 0.75);
+    background: #1E2125;
     backdrop-filter: blur(5px);
+
 
     display: flex;
     justify-content: space-between;
@@ -43,14 +44,14 @@ header {
     position: fixed;
     width:100%;
 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);*/
     z-index: 100;
     transition: 0.15s;
     top: 0;
 }
 
 header h1 {
-    color: #000000;
+    color: #E9DFCE;
     letter-spacing: 1px;
     word-spacing: 15px;
 }
@@ -67,7 +68,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: #E9DFCE;
     font-size: 22px;
     font-weight: 650;
     transition: 0.4s;
@@ -83,7 +84,7 @@ nav a:hover {
     nav {
         position: absolute;
         top: 100px;
-        background: white;
+        background: #1E2125;
         left: 0;
         flex-direction: column;
         width: 100%;
@@ -108,7 +109,7 @@ nav a:hover {
     label div {
         width: 100%;
         height: 5px;
-        background: black;
+        background: #E9DFCE;
         position: absolute;
         transform: translateY(-50%);
         border-radius: 99px;
@@ -159,9 +160,47 @@ main section {
     width: 100%;
     /*border-radius: 50px;*/
     scroll-margin-top: 120px;
+    height: 90vh;
 
-    background: rgb(243,243,243);
-    background: linear-gradient(90deg, rgba(243,243,243,1) 0%, rgba(220,220,220,1) 75%);
+    background: rgb(30,33,37);
+    color: #E9DFCE;
+}
+
+
+
+
+#hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding-bottom: 125px;
+}
+
+#hero h1 {
+    font-size: 200px;
+    font-weight: 200;
+}
+
+#hero .one {
+    width: 40%;
+    text-align: right;
+    padding-bottom: 200px;
+}
+
+#hero .two {
+    width: 60%;
+    text-align: left;
+    padding-top: 200px;
 }
 
 
@@ -242,7 +281,6 @@ main section {
 
 
 #projects {
-    height: 75vh;
     text-align: center;
     display: flex;
     flex-direction: column;
