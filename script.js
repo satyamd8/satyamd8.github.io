@@ -1,3 +1,25 @@
+let lastScrollTop = 0; // Store the last scroll position
+
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+    const headerHeight = header.offsetHeight;
+
+    if (currentScrollTop > headerHeight) {
+        if (currentScrollTop > lastScrollTop) {
+            // Scrolling down: hide the navbar
+            header.style.top = '-100px'; // Move navbar out of view
+        } else {
+            // Scrolling up: show the navbar
+            header.style.top = '0'; // Move navbar back into view
+        }
+    }
+
+    lastScrollTop = currentScrollTop; // Update the last scroll position
+});
+
+
+/*
 // Projects tab
 const tabs = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]');
@@ -29,3 +51,4 @@ navLinks.forEach(link => {
         link.classList.add('active');
     });
 });
+*/
