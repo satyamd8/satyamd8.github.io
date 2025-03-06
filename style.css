@@ -45,10 +45,12 @@ https://www.joshwcomeau.com/css/interactive-guide-to-grid/
 
 html {
     scroll-behavior: smooth !important;
+    overflow-x: hidden;
 }
 
 body {
     background: #1E2125;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -266,20 +268,34 @@ main section {
 
 #hero .one {
     width: 40%;
-    text-align: left;
+    text-align: right;
     padding-bottom: 200px;
-
-    transform: translateX(475px);
-    transition: 3s ease;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideFromLeft 3s ease forwards;
 }
 
 #hero .two {
     width: 60%;
-    text-align: right;
+    text-align: left;
     padding-top: 200px;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideFromRight 3s ease forwards;
+}
 
-    transform: translateX(-475px);
-    transition: 3s ease;
+@keyframes slideFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 #hero .welcome {
