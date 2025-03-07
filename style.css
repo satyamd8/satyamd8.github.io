@@ -577,3 +577,16 @@ main section {
 .social-link span {
     font-size: 1.1rem;
 }
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #E9DFCE;
+}
