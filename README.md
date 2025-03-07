@@ -1,2 +1,1 @@
-WORK IN PROGRESS
-portfolio website WIP
+My Portfolio Website
