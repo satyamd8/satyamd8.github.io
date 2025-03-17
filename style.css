@@ -4,18 +4,6 @@
 
 
 
-
-
-/*
-USE A GRID LAYOUT TO SPEARATE THE CONTAINER INTO TWO SECTIONS
-https://www.joshwcomeau.com/css/interactive-guide-to-grid/
-*/
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -41,6 +29,28 @@ https://www.joshwcomeau.com/css/interactive-guide-to-grid/
     background: rgba(233, 223, 206, 0.6);
 }
 
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment {
+    display: block;
+    height: 16px;
+    background-color: #1E2125;
+    background-size: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background-image: url(/imgs/arrow-up.png);
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background-image: url(/imgs/arrow-down.png);
+}
+
+::-webkit-scrollbar-button:hover {
+    background-color: rgba(30, 33, 37, 0.8);
+}
+
 
 
 html {
@@ -51,6 +61,7 @@ html {
 body {
     background: #1E2125;
     overflow-x: hidden;
+    z-index: -1;
 }
 
 h1 {
@@ -149,16 +160,24 @@ nav a:hover {
 
 @media (max-width: 768px) {
     nav {
+        z-index: 100;
         position: absolute;
+
         top: 100px;
-        background: #1E2125;
         left: 0;
-        flex-direction: column;
         width: 100%;
-        align-items: center;
         height: 0;
-        transition: 0.5s;
+
+        background: rgba(30, 33, 37, 0.95);
+        
+        flex-direction: column;
+        align-items: center;
         overflow: hidden;
+        transition: 0.5s ease;
+
+
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
     }
 
     nav a:nth-child(1) {
@@ -353,7 +372,6 @@ main section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
 
     transform-origin: center;
     transition: 0.3s ease-out;
@@ -589,4 +607,114 @@ footer {
     align-items: center;
 
     color: #E9DFCE;
+}
+
+
+
+/*
+MOBILE FRIENDLY
+*/
+
+
+@media (max-width: 768px) {
+
+    #hero {
+        height: 80vh;
+    }
+
+    .text-container {
+        flex-direction: column;
+    }
+
+    #hero h1 {
+        font-size: 120px;
+    }
+
+    #hero .one {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    #hero .two {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+
+
+
+
+
+    #about {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .img-container {
+        width: 50%;
+        height: auto;
+        border-radius: 10%;
+    }
+
+    #about .about {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #about .about .text {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+
+
+
+
+
+
+    .skills ul {
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+
+
+
+
+
+    #projects ul {
+        gap: 0px;
+    }
+
+    #projects .box {
+        width: 300px;
+        height: 350px;
+        min-width: 300px;
+    }
+
+
+
+
+
+    
+
+    #contact {
+        height: auto;
+        gap: 2rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .social-link {
+        width: 100%;
+        justify-content: center;
+    }
 }
