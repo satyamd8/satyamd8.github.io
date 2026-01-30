@@ -38,3 +38,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+const languageBtn = document.getElementById("language");
+const frontendBtn = document.getElementById("frontend");
+const backendBtn = document.getElementById("backend");
+const buttons = [languageBtn, frontendBtn, backendBtn];
+
+const languages = document.querySelector(".languages")
+const frontend = document.querySelector(".frontend")
+const backend = document.querySelector(".backend")
+const sections = [languages, frontend, backend];
+
+function setActive(section, active) {
+    section.forEach(e => {
+        e.classList.remove("active");
+    })
+    active.classList.add("active");
+}
+
+languageBtn.addEventListener('click', function () {
+    setActive(buttons, languageBtn);
+    setActive(sections, languages);
+});
+
+frontendBtn.addEventListener('click', function () {
+    setActive(buttons, frontendBtn);
+    setActive(sections, frontend);
+});
+
+backendBtn.addEventListener('click', function () {
+    setActive(buttons, backendBtn);
+    setActive(sections, backend);
+});

@@ -415,7 +415,7 @@ main section {
 
 
 #skills {
-    height: 30vh;
+    height: 40vh;
 
     display: flex;
     flex-direction: column;
@@ -427,14 +427,87 @@ main section {
     margin-bottom: 20px;
 }
 
-.skills ul {
+/* buttons */
+
+#skills .buttons {
+    display: flex;
+    gap: 5rem;
+    padding: 20px;
+}
+
+#skills .buttons button {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    font-size: 1.1rem;
+    text-decoration: none;
+
+    color: #E9DFCE;
+    background: rgba(233, 223, 206, 0.05);
+    
+    border-radius: 10px;
+    border: 1px solid rgba(233, 223, 206, 0.1);
+    
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#skills .buttons button:hover {
+    transform: translateY(-5px);
+    background: rgba(233, 223, 206, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#skills .buttons button.active {
+    background: rgba(233, 223, 206, 0.1);
+    color: #fff;
+    border: 1px solid rgba(233, 223, 206, 0);
+    box-shadow: 0 0 15px rgba(233, 223, 206, 0.3), 
+                0 0 5px rgba(233, 223, 206, 0);
+    transform: translateY(-5px);
+}
+
+/*sections*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.languages, .frontend, .backend {
+    display: none;
+    opacity: 0;
+}
+
+#skills .languages.active, 
+#skills .frontend.active, 
+#skills .backend.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s forwards;
+}
+
+#skills .active ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     gap: 100px;
 }
 
-.skills li {
+#skills .active li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,7 +516,7 @@ main section {
     gap: 10px;
 }
 
-.skills img {
+#skills .active img {
     width: clamp(4rem, 4vw, 4rem);
     height: auto;
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/imgs/favicon.svg" type="image/x-icon">
     <title>Satyam's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -25,7 +26,7 @@
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
-            <a href="#contact">Links</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -40,7 +41,7 @@
                 </div>
             </div>
             <div class="welcome">
-                <h2>Explore my world.</h2>
+                <h2>Welcome</h2>
             </div>
         </section>
 
@@ -56,12 +57,12 @@
                 </div>
                 <div class="text">
                     <p>
-                        Hey! I'm Satyam, a Computer Science major at Hunter College and an aspiring Software Engineer based in NYC.
+                        Hello! I'm Satyam, a Computer Science major at Hunter College and a Junior Software Developer based in NYC.
                     </p>
 
                     <p>
-                        My foundation is in Front End Development, Python, Java, and C++,
-                        and I'm interested in Software Engineering, especially Web Development and building Full-Stack applications.
+                        I have experience across full stack development, including designing responsive front-end user interfaces, back-end APIs and logic, 
+                        and relational database design and management.
                     </p>
 
                     <p>
@@ -83,7 +84,7 @@
                 <li>
                     <div class="box">
                         <a href="https://nycfreshfinder.com" target="_blank"><h2>NYC Fresh Finder</h2></a>
-                        <h3>Full-stack</h3>
+                        <h3>HTML, CSS, JavaScript, Express, Leaflet, Python</h3>
                         <img src="/imgs/nycfreshfinder.png">
                         <p>NYC Fresh Finder helps New Yorkers find affordable, healthy food by mapping grocery stores, food pantries, and farmers' markets with real-time price data.</p>
                     </div>
@@ -92,7 +93,7 @@
                 <li>
                     <div class="box">
                         <a href="https://satyamd8.github.io/da.ily/" target="_blank"><h2>da.ily</h2></a>
-                        <h3>Full-stack</h3>
+                        <h3>HTML, CSS, JavaScript</h3>
                         <img src="/imgs/daily.png">
                         <p>A study planner website designed to create a cozy virtual environment students can use to stay organized and focused while studying.</p>
                     </div>
@@ -104,6 +105,15 @@
                         <h3>Python</h3>
                         <img src="/imgs/discord bot.png">
                         <p>A Discord Bot with log, moderation, and fun commands as well as a YouTube music player. Built with discord.py</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="box">
+                        <a href="https://github.com/satyamd8/discord-bot" target="_blank"><h2>da.ily (React)</h2></a>
+                        <h3>React, TypeScript, Express, PostgreSQL</h3>
+                        <img src="/imgs/daily.png">
+                        <p>This is a project that aims to recreate my da.ily website into a React web app with an Express + PostgreSQL backend.</p>
                     </div>
                 </li>
 
@@ -132,10 +142,15 @@
         
         <section id="skills">
             <h1>Skills</h1>
-            <div class="skills">
+            <div class="buttons">
+                <button id="language">Languages</button>
+                <button id="frontend">Frontend</button>
+                <button id="backend">Backend</button>
+            </div>
+            <div class="languages active">
                 <ul>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++"/>
                         <span>C++</span>
                     </li>
                     <li>
@@ -147,16 +162,44 @@
                         <span>Python</span>
                     </li>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"/>
+                        <span>TypeScript</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="frontend">
+                <ul>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+                        <span>React</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"/>
                         <span>HTML</span>
                     </li>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS">
                         <span>CSS</span>
                     </li>
+                </ul>
+            </div>
+            <div class="backend">
+                <ul>
+                    <li>   
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js"/>
+                        <span>Node.js</span>
+                    </li>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        <span>JavaScript</span>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express"/>
+                        <span>Express.js</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/>
+                        <span>PostgreSQL</span>
                     </li>
                 </ul>
             </div>
@@ -165,7 +208,7 @@
         <hr>
 
         <section id="contact">
-            <h1>Links</h1>
+            <h1>Contact</h1>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/satyam-dhar" target="_blank" class="social-link">
                     <i class="fab fa-linkedin"></i>
@@ -175,17 +218,18 @@
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="/Satyam_Dhar_Resume.pdf" download target="_blank" class="social-link">
+                <a href="/Satyam_Dhar_Resume.pdf" target="_blank" class="social-link">
                     <i class="fa-regular fa-file"></i>
                     <span>Resume</span>
                 </a>
             </div>
+            <p style="font-size: 24px;">satyamdhar8@gmail.com</p>
         </section>
 
         <hr>
 
         <footer>
-            <p>&copy; 2025 Satyam Dhar</p>
+            <p>&copy; 2026 Satyam Dhar</p>
         </footer>
     </main>
 </body>
