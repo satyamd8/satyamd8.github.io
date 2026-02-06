@@ -1,3 +1,41 @@
+// Theme toggle (dark default, light optional)
+(function () {
+    const THEME_KEY = 'portfolio-theme';
+    const getStored = () => localStorage.getItem(THEME_KEY);
+    const setStored = (theme) => theme ? localStorage.setItem(THEME_KEY, theme) : localStorage.removeItem(THEME_KEY);
+
+    function applyTheme(theme) {
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+    }
+
+    function initTheme() {
+        const stored = getStored();
+        if (stored === 'light') applyTheme('light');
+        else applyTheme('dark');
+    }
+
+    initTheme();
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                applyTheme('dark');
+                setStored(null);
+            } else {
+                applyTheme('light');
+                setStored('light');
+            }
+        });
+    });
+})();
+
 let lastScrollTop = 0;
 
 //handles nav bar showing when scrolling up

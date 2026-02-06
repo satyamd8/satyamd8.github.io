@@ -2,7 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
+:root {
+    --dark: #1E2125;
+    --light: #E9DFCE;
+    /* Dark mode (default) */
+    --bg: var(--dark);
+    --text: var(--light);
+    --header-bg: rgba(30, 33, 37, 0.9);
+    --box-bg: #282c31;
+    --box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    --box-border: 1px solid rgba(233, 223, 206, 0.06);
+    --button-bg: color-mix(in srgb, var(--text) 5%, transparent);
+    --button-border: color-mix(in srgb, var(--text) 15%, transparent);
+    --button-hover-bg: color-mix(in srgb, var(--text) 12%, transparent);
+    --button-active-bg: color-mix(in srgb, var(--text) 15%, transparent);
+    --button-active-border: color-mix(in srgb, var(--text) 50%, transparent);
+    --button-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
+[data-theme="light"] {
+    --bg: var(--light);
+    --text: var(--dark);
+    --header-bg: rgba(233, 223, 206, 0.9);
+    --box-bg: #f5f1eb;
+    --box-shadow: 0 4px 24px rgba(30, 33, 37, 0.08), 0 1px 3px rgba(30, 33, 37, 0.04);
+    --box-border: 1px solid rgba(30, 33, 37, 0.08);
+    --button-bg: rgba(30, 33, 37, 0.07);
+    --button-border: rgba(30, 33, 37, 0.16);
+    --button-hover-bg: rgba(30, 33, 37, 0.11);
+    --button-active-bg: rgba(30, 33, 37, 0.14);
+    --button-active-border: rgba(30, 33, 37, 0.4);
+    --button-shadow: 0 4px 14px rgba(30, 33, 37, 0.12);
+}
 
 * {
     margin: 0;
@@ -16,24 +47,24 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--bg);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #E9DFCE;
+    background: var(--text);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(233, 223, 206, 0.6);
+    background: color-mix(in srgb, var(--text) 85%, transparent);
 }
 
 ::-webkit-scrollbar-button:vertical:start:decrement,
 ::-webkit-scrollbar-button:vertical:end:increment {
     display: block;
     height: 16px;
-    background-color: #1E2125;
+    background-color: var(--bg);
     background-size: 8px;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,7 +79,7 @@
 }
 
 ::-webkit-scrollbar-button:hover {
-    background-color: rgba(30, 33, 37, 0.8);
+    filter: brightness(0.9);
 }
 
 
@@ -59,7 +90,7 @@ html {
 }
 
 body {
-    background: #1E2125;
+    background: var(--bg);
     overflow-x: hidden;
     z-index: -1;
 }
@@ -81,7 +112,7 @@ hr {
     height: 4px;
     border: none;
     border-radius: 50px;
-    background: #E9DFCE;
+    background: var(--text);
 }
 
 
@@ -90,7 +121,7 @@ input {
 }
 
 header {
-    background: rgba(30, 33, 37, 0.9);
+    background: var(--header-bg);
     backdrop-filter: blur(3px);
 
 
@@ -110,25 +141,53 @@ header {
 }
 
 header h1 {
-    color: #E9DFCE;
+    color: var(--text);
     letter-spacing: 1px;
     word-spacing: 15px;
     font-weight: 300;
 }
 
-header span {
-    font-size: 48px;
-    font-weight: 300;
-}
-
 nav {
     display: flex;
+    align-items: center;
     gap: 75px;
 }
 
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--text) 10%, transparent);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: color-mix(in srgb, var(--text) 20%, transparent);
+    transform: scale(1.05);
+}
+
+.theme-toggle i {
+    font-size: 1.25rem;
+}
+
+/* Light mode: show moon (switch to dark). Dark mode: show sun (switch to light) */
+/* Default (dark): show sun to switch to light. Light: show moon to switch to dark */
+.theme-toggle .fa-moon { display: none; }
+.theme-toggle .fa-sun { display: block; }
+
+[data-theme="light"] .theme-toggle .fa-moon { display: block; }
+[data-theme="light"] .theme-toggle .fa-sun { display: none; }
+
 nav a {
     text-decoration: none;
-    color: #E9DFCE;
+    color: var(--text);
     font-size: 22px;
     font-weight: 300;
     transition: 0.4s;
@@ -143,7 +202,7 @@ nav a::after {
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background-color: #E9DFCE; 
+    background-color: var(--text); 
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.5s ease;
@@ -168,7 +227,7 @@ nav a:hover {
         width: 100%;
         height: 0;
 
-        background: rgba(30, 33, 37, 0.95);
+        background: var(--header-bg);
         
         flex-direction: column;
         align-items: center;
@@ -184,6 +243,10 @@ nav a:hover {
         margin-top: 50px;
     }
 
+    .theme-toggle {
+        margin-top: 1.5rem;
+    }
+
     label {
         width: 45px;
         height:30px;
@@ -195,7 +258,7 @@ nav a:hover {
     label div {
         width: 100%;
         height: 5px;
-        background: #E9DFCE;
+        background: var(--text);
         position: absolute;
         transform: translateY(-50%);
         border-radius: 99px;
@@ -252,8 +315,8 @@ main section {
     scroll-margin-top: 120px;
     height: 80vh;
 
-    background: rgb(30,33,37);
-    color: #E9DFCE;
+    background: var(--bg);
+    color: var(--text);
 }
 
 
@@ -443,11 +506,11 @@ main section {
     font-size: 1.1rem;
     text-decoration: none;
 
-    color: #E9DFCE;
-    background: rgba(233, 223, 206, 0.05);
+    color: var(--text);
+    background: var(--button-bg);
     
     border-radius: 10px;
-    border: 1px solid rgba(233, 223, 206, 0.1);
+    border: 1px solid var(--button-border);
     
     cursor: pointer;
     transition: all 0.5s ease;
@@ -455,16 +518,15 @@ main section {
 
 #skills .buttons button:hover {
     transform: translateY(-5px);
-    background: rgba(233, 223, 206, 0.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: var(--button-hover-bg);
+    box-shadow: var(--button-shadow);
 }
 
 #skills .buttons button.active {
-    background: rgba(233, 223, 206, 0.1);
-    color: #fff;
-    border: 1px solid rgba(233, 223, 206, 0);
-    box-shadow: 0 0 15px rgba(233, 223, 206, 0.3), 
-                0 0 5px rgba(233, 223, 206, 0);
+    background: var(--button-active-bg);
+    color: var(--text);
+    border: 1px solid var(--button-active-border);
+    box-shadow: var(--button-shadow);
     transform: translateY(-5px);
 }
 
@@ -543,7 +605,7 @@ main section {
 
     overflow-x: auto;
 
-    padding: 20px 100px;
+    padding: 20px 120px;
     margin: 0;
     width: 100%;
     height: 75%;
@@ -553,23 +615,24 @@ main section {
         height: 7px;
     }
     &::-webkit-scrollbar-track {
-        background: rgba(233, 223, 206, 0.05);
+        background: var(--bg);
         border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb {
-        background: #E9DFCE;
+        background: var(--text);
         border-radius: 10px;
     }
 }
 
 #projects .box {
-    background: #282c31;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);;
+    background: var(--box-bg);
+    box-shadow: var(--box-shadow);
+    border: var(--box-border);
     height: 400px;
     width: 400px;
 
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     
     white-space: normal;
     overflow: hidden;
@@ -591,19 +654,20 @@ main section {
 }
 
 #projects a {
-    color: #E9DFCE;
+    color: var(--text);
     transition: 0.1s ease;
 }
 
 #projects a:hover {
     font-size: 18px;
     transition: 0.1s ease;
-    text-shadow: 0 0 5px rgba(233, 223, 206, 0.3);
+    text-shadow: 0 0 5px color-mix(in srgb, var(--text) 30%, transparent);
 }
 
 
 #projects .box h3 {
-    font-weight: 100;
+    font-weight: 300;
+    opacity: 0.9;
 }
 
 #projects .box img {
@@ -639,17 +703,17 @@ main section {
     gap: 0.5rem;
     padding: 1rem 2rem;
     text-decoration: none;
-    color: #E9DFCE;
-    background: rgba(233, 223, 206, 0.05);
+    color: var(--text);
+    background: var(--button-bg);
     border-radius: 10px;
-    border: 1px solid rgba(233, 223, 206, 0.1);
+    border: 1px solid var(--button-border);
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
     transform: translateY(-5px);
-    background: rgba(233, 223, 206, 0.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: var(--button-hover-bg);
+    box-shadow: var(--button-shadow);
 }
 
 .social-link i {
@@ -670,7 +734,7 @@ footer {
     justify-content: center;
     align-items: center;
 
-    color: #E9DFCE;
+    color: var(--text);
 }
 
 

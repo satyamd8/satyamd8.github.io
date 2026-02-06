@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/imgs/favicon.svg" type="image/x-icon">
     <title>Satyam's Portfolio</title>
+    <script>
+        (function(){var t=localStorage.getItem('portfolio-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();
+    </script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,6 +30,10 @@
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
         </nav>
     </header>
 
@@ -83,7 +90,7 @@
             <ul>
                 <li>
                     <div class="box">
-                        <a href="https://nycfreshfinder.com" target="_blank"><h2>NYC Fresh Finder</h2></a>
+                        <a href="https://github.com/emilyannwx/nycfreshfinder" target="_blank"><h2>NYC Fresh Finder</h2></a>
                         <h3>HTML, CSS, JavaScript, Node, Express, Leaflet, Python</h3>
                         <img src="/imgs/nycfreshfinder.png">
                         <p>NYC Fresh Finder helps New Yorkers find affordable, healthy food by mapping grocery stores, food pantries, and farmers' markets with real-time price data.</p>
@@ -92,7 +99,7 @@
 
                 <li>
                     <div class="box">
-                        <a href="https://satyamd8.github.io/da.ily/" target="_blank"><h2>da.ily</h2></a>
+                        <a href="https://github.com/satyamd8/da.ily" target="_blank"><h2>da.ily</h2></a>
                         <h3>HTML, CSS, JavaScript, Node, Express, PostgreSQL</h3>
                         <img src="/imgs/daily.png">
                         <p>A study planner web app designed to create a cozy virtual environment students can use to stay organized and focused while studying.</p>
@@ -110,7 +117,7 @@
 
                 <li>
                     <div class="box">
-                        <a href="https://github.com/satyamd8/discord-bot" target="_blank"><h2>da.ily (React)</h2></a>
+                        <a href="https://github.com/satyamd8/da.ily-react" target="_blank"><h2>da.ily (React)</h2></a>
                         <h3>React, TypeScript, Express, PostgreSQL</h3>
                         <img src="/imgs/daily.png">
                         <p>This is a project that aims to recreate my da.ily website into a React web app with an Express + PostgreSQL backend.</p>
@@ -119,8 +126,8 @@
 
                 <li>
                     <div class="box">
-                        <a href="https://github.com/satyamd8/restaurant-template" target="_blank"><h2>Restaurant Website Template</h2></a>
-                        <h3>HTML, CSS, JavaScript</h3>
+                        <a href="https://github.com/satyamd8/restaurant-react-template" target="_blank"><h2>Restaurant Website Template</h2></a>
+                        <h3>React</h3>
                         <img src="/imgs/restaurant.png">
                         <p>A customizable restaurant website template, designed for easy adaptation and use.</p>
                     </div>
@@ -143,7 +150,7 @@
         <section id="skills">
             <h1>Skills</h1>
             <div class="buttons">
-                <button id="language">Languages</button>
+                <button id="language" class="active">Languages</button>
                 <button id="frontend">Frontend</button>
                 <button id="backend">Backend</button>
             </div>
